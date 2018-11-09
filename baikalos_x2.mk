@@ -20,6 +20,10 @@
 #
 
 # Inherit from those products. Most specific first.
+
+BAIKALOS_BUILD_DEV := true
+BAIKALOS_BUILD_TEST := true
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
