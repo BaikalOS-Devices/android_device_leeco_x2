@@ -187,6 +187,7 @@
         <param key="audio.nat.codec.enabled" value="false"/>
         <param key="native_audio_mode" value="src"/>
         <param key="input_mic_max_count" value="4"/>
+        <param key="anc_enabled" value="true"/>
         <!-- In the below value string, first parameter indicates size -->
         <!-- followed by perf lock options                             -->
         <param key="perf_lock_opts" value="2, 0x101, 0x20F"/>
