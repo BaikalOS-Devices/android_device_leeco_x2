@@ -32,7 +32,7 @@ TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 TARGET_OTA_ASSERT_DEVICE := le_x2,le_x2_india,le_x2_na,LeMax2_CN,LeMax2_NA,LeMax2_WW,LeMax2
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff log_buf_len=8M sched_enable_hmp=1 sched_enable_power_aware=1
 BOARD_KERNEL_CMDLINE += androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
