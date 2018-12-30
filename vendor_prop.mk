@@ -15,6 +15,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.qfp_enable=1 \
     persist.qfp=true \
     persist.qfp.fd_enabled=1 \
     persist.qfp.touch_enabled=0 \
