@@ -103,26 +103,26 @@ on property:persist.camera.focus_fix=1
 on property:persist.camera.focus_fix=0
     write /sys/module/msm_actuator/parameters/use_focus_fix 0
 
-on property:persist.qfp.wup_display=0 && property:sys.boot_completed=1
-    stop qfp-daemon
-    stop vendor.fps_hal
-    start qfp-daemon
-    start vendor.fps_hal
+#on property:persist.qfp.wup_display=0 && property:sys.boot_completed=1
+#    stop qfp-daemon
+#    stop vendor.fps_hal
+#    start qfp-daemon
+#    start vendor.fps_hal
 
-on property:persist.qfp.wup_display=1 && property:sys.boot_completed=1
-    stop qfp-daemon
-    stop vendor.fps_hal
-    start qfp-daemon
-    start vendor.fps_hal
+#on property:persist.qfp.wup_display=1 && property:sys.boot_completed=1
+#    stop qfp-daemon
+#    stop vendor.fps_hal
+#    start qfp-daemon
+#    start vendor.fps_hal
 
-on property:persist.qfp_enable=0
-    setprop persist.qfp false
-    stop qfp-daemon
-    stop vendor.fps_hal
+#on property:persist.qfp_enable=0
+#    setprop persist.qfp false
+#    stop qfp-daemon
+#    stop vendor.fps_hal
 
-on property:persist.qfp_enable=1 && property:sys.boot_completed=1
-    setprop persist.qfp true
-    start qfp-daemon
-    start vendor.fps_hal
+#on property:persist.qfp_enable=1 && property:sys.boot_completed=1
+#    setprop persist.qfp true
+#    start qfp-daemon
+#    start vendor.fps_hal
 
     
