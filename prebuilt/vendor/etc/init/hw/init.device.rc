@@ -77,6 +77,8 @@ on post-fs
     # Touchscreen
     chown system system /sys/devices/soc/75ba000.i2c/i2c-12/12-004b/input/input3/0dbutton
     chmod 0666 /sys/devices/soc/75ba000.i2c/i2c-12/12-004b/input/input3/0dbutton
+    chown system system /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/keys_on
+    chmod 0666 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/keys_on
 
 # msm specific files that need to be created on /data
 on post-fs-data
