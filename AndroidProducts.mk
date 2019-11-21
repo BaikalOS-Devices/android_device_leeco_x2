@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/revengeos_x2.mk
+    $(LOCAL_DIR)/baikalos_x2.mk
