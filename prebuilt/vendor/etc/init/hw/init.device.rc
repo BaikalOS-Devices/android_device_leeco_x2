@@ -72,7 +72,18 @@ on boot
     chown system system /sys/devices/virtual/graphics/fb0/rgb
     chmod 664 /sys/devices/virtual/graphics/fb0/rgb
 
+   # wake_gesture
+    chown system system /sys/devices/soc/75ba000.i2c/i2c-12/12-004b/input/input3/wake_gesture
+    chmod 0666 /sys/devices/soc/75ba000.i2c/i2c-12/12-004b/input/input2/wake_gesture
+
 on post-fs-data
+
+    # Touchscreen
+    chown system system /sys/devices/soc/75ba000.i2c/i2c-12/12-004b/input/input3/0dbutton
+    chmod 0666 /sys/devices/soc/75ba000.i2c/i2c-12/12-004b/input/input3/0dbutton
+    chown system system /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/keys_on
+    chmod 0666 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/keys_on
+
     # Create directories for Fingerprint
     mkdir /data/misc/stargate 0770 system system
     mkdir /data/misc/stargate/bg_estimation 0770 system system
@@ -98,3 +109,11 @@ service vendor.tfa-sh /vendor/bin/init.tfa.sh /vendor/etc/silence_short.wav 15 1
 
 on property:sys.boot_completed=1
     start vendor.tfa-sh
+
+# autofocus fix
+on property:persist.camera.focus_fix=1
+    write /sys/module/msm_actuator/parameters/use_focus_fix 1
+
+on property:persist.camera.focus_fix=0
+    write /sys/module/msm_actuator/parameters/use_focus_fix 0
+
