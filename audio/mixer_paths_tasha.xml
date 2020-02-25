@@ -51,7 +51,7 @@
     <!--ctl name="LINEOUT4 Volume" value="13" /-->
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
-    <ctl name="RX0 Digital Volume" value="89" />
+    <ctl name="RX0 Digital Volume" value="84" />
     <ctl name="RX1 Digital Volume" value="84" />
     <ctl name="RX2 Digital Volume" value="84" />
     <ctl name="RX3 Digital Volume" value="84" />
@@ -2348,7 +2348,7 @@
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
         <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
-        <ctl name="RX0 Digital Volume" value="88" />
+        <ctl name="RX0 Digital Volume" value="84" />
         <ctl name="ANC Slot" value="6" />
         <ctl name="ADC MUX10" value="AMIC" />
         <ctl name="AMIC MUX10" value="ADC5" />
