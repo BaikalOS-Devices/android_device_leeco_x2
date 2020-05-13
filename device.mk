@@ -21,6 +21,13 @@
 # definition file).
 #
 
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
+
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 $(call inherit-product-if-exists, vendor/leeco/x2/x2-vendor.mk)
 
 # Overlays
