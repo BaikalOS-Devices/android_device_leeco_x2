@@ -21,6 +21,8 @@
 # definition file).
 #
 
+BUILD_BROKEN_DUP_RULES := true
+
 # inherit from msm8996-common
 -include device/leeco/msm8996-common/BoardConfigCommon.mk
 
@@ -32,6 +34,7 @@ TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 TARGET_OTA_ASSERT_DEVICE := le_x2,le_x2_india,le_x2_na,LeMax2_CN,LeMax2_NA,LeMax2_WW,LeMax2
 
 # Kernel
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive log_buf_len=8M
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
 BOARD_RAMDISK_OFFSET     := 0x02200000
 
